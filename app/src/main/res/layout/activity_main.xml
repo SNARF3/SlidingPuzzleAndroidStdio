@@ -36,26 +36,27 @@
         android:layout_centerInParent="true"
         >
         <ImageView
+            android:id="@+id/bt2x2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="-28dp"
+            android:background="@drawable/boton2x2"
+            android:layout_margin="10dp"/>
+        <ImageView
             android:id="@+id/bt3x3"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="-28dp"
-            android:background="@drawable/boton3x3"
+            android:background="@drawable/boton3x3xd"
             android:layout_margin="10dp"/>
+
 
         <ImageView
             android:id="@+id/bt4x4"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="-28dp"
-            android:background="@drawable/boton4x4"
-            android:layout_margin="10dp"/>
-        <ImageView
-            android:id="@+id/bt5x5"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="-28dp"
-            android:background="@drawable/boton5x5"
+            android:background="@drawable/boton4x4xd"
             android:layout_margin="10dp"/>
 
 

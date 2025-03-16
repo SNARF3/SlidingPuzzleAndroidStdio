@@ -14,7 +14,6 @@
         android:layout_height="150dp"
         android:layout_marginTop="-10dp"
         android:layout_marginLeft="-15dp"
-
         android:background="@drawable/retroceder"
         android:scaleType="centerCrop"
         android:textAlignment="center"
@@ -45,7 +44,137 @@
     <RelativeLayout
         android:layout_width="260dp"
         android:layout_height="260dp"
-        android:layout_marginTop="480dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/rlVistaJuego"
+        android:layout_below="@+id/tvContador"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        >
+
+        <LinearLayout
+            android:id="@+id/llVista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_above="@+id/llvista2">
+
+            <TextView
+                android:id="@+id/tvAv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#009688"
+                android:text="A"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textColor="#00000000"/>
+
+            <TextView
+                android:id="@+id/tvBv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#7687DE"
+                android:gravity="center"
+                android:text="B"
+                android:textColor="#00000000"
+                android:textSize="50dp" />
+
+            <TextView
+                android:id="@+id/tvCv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#9C27B0"
+                android:text="C"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textColor="#00000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llvista2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tvDv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#673AB7"
+                android:text="D"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textColor="#00000000" />
+
+            <TextView
+                android:id="@+id/tvEv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#3F51B5"
+                android:text="E"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textColor="#00000000" />
+
+            <TextView
+                android:id="@+id/tvFv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#FF5722"
+                android:text="F"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textColor="#00000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/llvista2">
+
+            <TextView
+                android:id="@+id/tvGv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#FF9800"
+                android:text="G"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textColor="#00000000" />
+
+            <TextView
+                android:id="@+id/tvHv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#FFC107"
+                android:text="H"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textColor="#00000000" />
+            <TextView
+                android:id="@+id/tvXv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#00000000"
+                android:text="X"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textColor="#00000000" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="340dp"
+        android:layout_height="340dp"
+        android:layout_marginTop="425dp"
+        android:background="@drawable/fondojuego1"
         android:id="@+id/juego"
         android:gravity="center"
         android:layout_centerHorizontal="true"
@@ -69,18 +198,19 @@
                 android:textSize="50dp"
                 android:gravity="center"
                 android:textColor="#00000000"
-                android:layout_margin="3dp" />
+                android:layout_margin="3dp"
+                />
 
             <TextView
                 android:id="@+id/tvB"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="3dp"
                 android:background="#7687DE"
                 android:gravity="center"
                 android:text="B"
                 android:textColor="#00000000"
-                android:textSize="50dp" />
+                android:textSize="50dp"
+                android:layout_margin="3dp"/>
 
             <TextView
                 android:id="@+id/tvC"
@@ -91,7 +221,7 @@
                 android:textSize="50dp"
                 android:gravity="center"
                 android:textColor="#00000000"
-                android:layout_margin="3dp" />
+                android:layout_margin="3dp"/>
         </LinearLayout>
 
         <LinearLayout

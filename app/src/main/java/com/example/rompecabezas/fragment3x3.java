@@ -52,7 +52,7 @@ import java.util.*;
 
 public class fragment3x3 extends Fragment {
 
-    private TextView tvA, tvB, tvC, tvD, tvE, tvF, tvG, tvH, tvX, mTextView, tvContador;
+    private TextView tvA, tvB, tvC, tvD, tvE, tvF, tvG, tvH, tvX, mTextView, tvContador, tvAv, tvBv, tvCv, tvDv, tvEv, tvFv, tvGv, tvHv;
     private TextView[][] matriz;
     private int minutes = 0;
     private Map<String, Drawable> mapaFondos = new HashMap<>();
@@ -82,6 +82,17 @@ public class fragment3x3 extends Fragment {
         tvG = view.findViewById(R.id.tvG);
         tvH = view.findViewById(R.id.tvH);
         tvX = view.findViewById(R.id.tvX);
+        //vista
+        tvAv = view.findViewById(R.id.tvAv);
+        tvBv = view.findViewById(R.id.tvBv);
+        tvCv = view.findViewById(R.id.tvCv);
+        tvDv = view.findViewById(R.id.tvDv);
+        tvEv = view.findViewById(R.id.tvEv);
+        tvFv = view.findViewById(R.id.tvFv);
+        tvGv = view.findViewById(R.id.tvGv);
+        tvHv = view.findViewById(R.id.tvHv);
+
+        //-------------------------
         tvContador = view.findViewById(R.id.tvContador);
 
 
@@ -102,6 +113,7 @@ public class fragment3x3 extends Fragment {
 
             // Cargar las imágenes en los TextView
             if (imageParts != null) {
+                cargarImagenParaLaVista(view, imageParts);
                 cargarImagen(view, imageParts);
             }
         }
@@ -144,6 +156,25 @@ public class fragment3x3 extends Fragment {
         return view;
     }
     //pa cargar la imagen
+    private void cargarImagenParaLaVista(View view,ArrayList<byte[]> imageParts) {
+        // Verificar que hay suficientes partes para los TextView
+        if (imageParts != null && imageParts.size() ==9) {
+            // Asignar cada parte a un TextView
+            tvAv.setBackground(new BitmapDrawable(getResources(), BitmapFactory.decodeByteArray(imageParts.get(0), 0, imageParts.get(0).length)));
+            tvBv.setBackground(new BitmapDrawable(getResources(), BitmapFactory.decodeByteArray(imageParts.get(1), 0, imageParts.get(1).length)));
+            tvCv.setBackground(new BitmapDrawable(getResources(), BitmapFactory.decodeByteArray(imageParts.get(2), 0, imageParts.get(2).length)));
+            tvDv.setBackground(new BitmapDrawable(getResources(), BitmapFactory.decodeByteArray(imageParts.get(3), 0, imageParts.get(3).length)));
+            tvEv.setBackground(new BitmapDrawable(getResources(), BitmapFactory.decodeByteArray(imageParts.get(4), 0, imageParts.get(4).length)));
+            tvFv.setBackground(new BitmapDrawable(getResources(), BitmapFactory.decodeByteArray(imageParts.get(5), 0, imageParts.get(5).length)));
+            tvGv.setBackground(new BitmapDrawable(getResources(), BitmapFactory.decodeByteArray(imageParts.get(6), 0, imageParts.get(6).length)));
+            tvHv.setBackground(new BitmapDrawable(getResources(), BitmapFactory.decodeByteArray(imageParts.get(7), 0, imageParts.get(7).length)));
+            Toast.makeText(getActivity(), "No hay suficientes partes de la imagen", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+
+    //pa cargar la imagen del puzzle
     private void cargarImagen(View view,ArrayList<byte[]> imageParts) {
         // Verificar que hay suficientes partes para los TextView
         if (imageParts != null && imageParts.size() ==9) {

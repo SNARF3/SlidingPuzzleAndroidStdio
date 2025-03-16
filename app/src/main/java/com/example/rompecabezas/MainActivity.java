@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_IMAGE_CAPTURE = 2; // Código para la cámara
     private static final int REQUEST_CAMERA_PERMISSION = 100; // Código para solicitar permisos
 
-    private Uri imageUri; // URI de la imagen seleccionada o capturada
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,27 +98,37 @@ public class MainActivity extends AppCompatActivity {
     private void iniciarIntentCamara() {
         try {
             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            startActivityForResult(intent, 1);
+            startActivityForResult(intent, REQUEST_IMAGE_CAPTURE); // Usar la constante correcta
         } catch (Error e) {
             e.printStackTrace();
             Toast.makeText(this, "Error al crear el archivo de imagen", Toast.LENGTH_SHORT).show();
         }
-
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1 && resultCode == RESULT_OK) {
+
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) { // Para la cámara
             Bundle extras = data.getExtras();
             Bitmap image = (Bitmap) extras.get("data");
-
-            // Llamar a la función para abrir el fragmento y pasar el Bitmap
             if (image != null) {
                 abrirFragment3x3(image);
             }
+        } else if (requestCode == PICK_IMAGE && resultCode == RESULT_OK) { // Para la galería
+            if (data != null && data.getData() != null) {
+                try {
+                    Uri selectedImageUri = data.getData();
+                    Bitmap image = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
+                    abrirFragment3x3(image);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    Toast.makeText(this, "Error al cargar la imagen", Toast.LENGTH_SHORT).show();
+                }
+            }
         }
     }
+
 
     private void abrirFragment3x3(Bitmap image) {
         if (findViewById(R.id.main) != null) {
