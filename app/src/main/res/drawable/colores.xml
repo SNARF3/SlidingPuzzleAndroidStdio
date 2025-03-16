@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Colores básicos -->
+    <color android:name="colorA">#FF5733</color> <!-- Color para A -->
+    <color android:name="colorB">#33FF57</color> <!-- Color para B -->
+    <color android:name="colorC">#3357FF</color> <!-- Color para C -->
+    <color android:name="colorD">#FF33A1</color> <!-- Color para D -->
+    <color android:name="colorE">#A133FF</color> <!-- Color para E -->
+    <color android:name="colorF">#33FFF5</color> <!-- Color para F -->
+    <color android:name="colorG">#F5FF33</color> <!-- Color para G -->
+    <color android:name="colorH">#FF3333</color> <!-- Color para H -->
+    <color android:name="colorX">#000000</color> <!-- Color para X (casilla vacía) -->
+
+    <!-- Color transparente -->
+    <color name="transparent">#00000000</color> <!-- Transparencia total -->
+
+    <!-- Otros colores que puedas necesitar -->
+    <color android:name="black">#000000</color>
+    <color android:name="white">#FFFFFF</color>
+    <color android:name="gray">#808080</color>
+</resources>

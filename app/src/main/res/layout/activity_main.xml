@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:background="@drawable/svenslogo"
+        android:id="@+id/ivLogo"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elegir el nivel deseado"
+        android:layout_above="@+id/ll2"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/letras2elegant"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:layout_margin="10dp"
+        />
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivLogo"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        >
+        <ImageView
+            android:id="@+id/bt3x3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="-28dp"
+            android:background="@drawable/boton3x3"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/bt4x4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="-28dp"
+            android:background="@drawable/boton4x4"
+            android:layout_margin="10dp"/>
+        <ImageView
+            android:id="@+id/bt5x5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="-28dp"
+            android:background="@drawable/boton5x5"
+            android:layout_margin="10dp"/>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

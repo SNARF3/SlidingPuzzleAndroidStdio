@@ -1,0 +1,19 @@
+<resources>
+<!-- Estilo base para el diálogo -->
+    <style name="AlertDialogTheme" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/DialogTitleStyle</item>
+    </style>
+
+        <!-- Estilo para el título -->
+    <style name="DialogTitleStyle" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+    <item name="android:textSize">22sp</item>
+    <item name="android:textColor">@color/green_success</item> <!-- Color personalizado -->
+    </style>
+
+        <!-- Estilo para el botón positivo -->
+    <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item> <!-- Texto blanco -->
+        <item name="backgroundTint">@color/green_success</item> <!-- Fondo verde -->
+    </style>
+</resources>

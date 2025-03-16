@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/btnAtras"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginLeft="-15dp"
+
+        android:background="@drawable/retroceder"
+        android:scaleType="centerCrop"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tvReloj"
+        android:layout_width="188dp"
+        android:layout_height="126dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/letras"
+        android:gravity="center"
+        android:text="00:00"
+        android:textColor="#FFFFFF"
+        android:textSize="60sp" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/tvContador"
+        android:layout_centerInParent="true"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="480dp"
+        android:id="@+id/juego"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        >
+
+        <LinearLayout
+            android:id="@+id/Llay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_above="@+id/Llay2">
+
+            <TextView
+                android:id="@+id/tvA"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#009688"
+                android:text="A"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textColor="#00000000"
+                android:layout_margin="3dp" />
+
+            <TextView
+                android:id="@+id/tvB"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="3dp"
+                android:background="#7687DE"
+                android:gravity="center"
+                android:text="B"
+                android:textColor="#00000000"
+                android:textSize="50dp" />
+
+            <TextView
+                android:id="@+id/tvC"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#9C27B0"
+                android:text="C"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textColor="#00000000"
+                android:layout_margin="3dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Llay2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tvD"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#673AB7"
+                android:text="D"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textColor="#00000000"
+                android:layout_margin="3dp" />
+
+            <TextView
+                android:id="@+id/tvE"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#3F51B5"
+                android:text="E"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textColor="#00000000"
+                android:layout_margin="3dp" />
+
+            <TextView
+                android:id="@+id/tvF"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#FF5722"
+                android:text="F"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textColor="#00000000"
+                android:layout_margin="3dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/Llay2">
+
+            <TextView
+                android:id="@+id/tvG"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#FF9800"
+                android:text="G"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textColor="#00000000"
+                android:layout_margin="3dp" />
+
+            <TextView
+                android:id="@+id/tvH"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#FFC107"
+                android:text="H"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textColor="#00000000"
+                android:layout_margin="3dp" />
+
+            <TextView
+                android:id="@+id/tvX"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#161621"
+                android:text="X"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textColor="#00000000"
+                android:layout_margin="3dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnArmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/juego"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:backgroundTint="#1474BF"
+        android:fontFamily="@font/letras"
+        android:text="Armar con IA" />
+
+    <TextView
+        android:id="@+id/tvTextContador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvReloj"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/letras"
+        android:text="Contador: "
+        android:textSize="20sp"
+        android:textColor="#FFFFFF" />
+    <TextView
+        android:id="@+id/tvContador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvReloj"
+        android:layout_toRightOf="@+id/tvTextContador"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/letras"
+        android:text="0"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF" />
+</RelativeLayout>
